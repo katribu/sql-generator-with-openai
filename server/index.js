@@ -1,7 +1,7 @@
-const express = require('express')
-const cors = require('cors')
+import express from 'express'
+import cors from 'cors'
 const app = express()
-
+import generateSql from './function.js';
 
 app.use(express.json());
 app.use(cors());
@@ -11,7 +11,18 @@ app.get('/', function (req, res) {
   res.send('Hello World')
 })
 
+app.post('/generate-sql', async (req,res) => {
+const {query} = req.body
 
+try{
+  const result = await generateSql(query)
+  res.json({result})
+
+}catch(err){
+  console.error(err)
+  res.send(err)
+}
+})
 
 app.listen(PORT, console.log(`App listening on port ${PORT}`))
 
