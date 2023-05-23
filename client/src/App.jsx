@@ -24,7 +24,6 @@ function App() {
     e.preventDefault()
     const result = await fetchGeneratedQuery()
     setGeneratedQuery(result)
-    console.log("this submit button works")
   }
 
 
