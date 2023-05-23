@@ -42,7 +42,7 @@ function App() {
         <button>Generate</button>
       </form>
 
-      <p>{generatedQuery}</p>
+      <p className="query">{generatedQuery}</p>
     </div>
   )
 }

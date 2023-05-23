@@ -38,3 +38,9 @@ button:hover {
   background:rgb(27, 54, 27);
   color: whitesmoke;
 }
+
+.query {
+  max-width: 500px;
+  text-align: center;
+  margin: 20px auto;
+}
