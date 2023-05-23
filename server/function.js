@@ -12,7 +12,7 @@ const result = await openai.createChatCompletion({
     ]
 })
     
-    return result.data.choices[0].message
+    return result.data.choices[0].message.content
 
 }
 

@@ -20,7 +20,6 @@ try{
 
 }catch(err){
   console.error(err)
-  res.send(err)
 }
 })
 
