@@ -3,12 +3,14 @@ import { FaDatabase } from 'react-icons/fa';
 import { SiOpenai } from "react-icons/si";
 import './App.css'
 
+const BASE_URL = import.meta.env.VITE_RENDER_API_URL || 'http://localhost:3005'
+
 function App() {
   const [generatedQuery, setGeneratedQuery] = useState("")
   const [stringToBeInterpreted, setStringToBeInterpreted] = useState("")
 
   const fetchGeneratedQuery = async () => {
-    const generate = await fetch('http://localhost:3005/generate-sql', {
+    const generate = await fetch(`${BASE_URL}/generate-sql`, {
       method: "POST",
       headers: {
         "Content-Type":"application/json",

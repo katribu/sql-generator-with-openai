@@ -1,4 +1,5 @@
 {"type":"module",
+"name":"server",
 "scripts": {
     "start":"node index.js"
 },
